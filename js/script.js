@@ -1,6 +1,3 @@
-// =========================
-// Helpers
-// =========================
 function $(selector) {
   return document.querySelector(selector);
 }
@@ -20,19 +17,31 @@ function getTimeGreeting() {
   return "Good evening 👋";
 }
 
-// =========================
-// On Load
-// =========================
+function greetUser() {
+  const nameInput = document.getElementById("nameInput");
+  const greetMessage = document.getElementById("greetMessage");
+
+  if (!nameInput || !greetMessage) return;
+
+  const name = nameInput.value.trim();
+
+  if (name === "") {
+    greetMessage.textContent = "Please enter your name.";
+    return;
+  }
+
+  greetMessage.textContent = `Hello, ${name}! Welcome to my portfolio.`;
+}
+
+window.greetUser = greetUser;
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Footer year
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Greeting message by time of day (interactivity)
   const greetingEl = $("#greeting");
   if (greetingEl) greetingEl.textContent = getTimeGreeting();
 
-  // Theme toggle (interactivity)
   const savedTheme = localStorage.getItem("theme");
   setTheme(savedTheme || "dark");
 
@@ -42,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTheme(current === "dark" ? "light" : "dark");
   });
 
-  // Mobile nav toggle
   const navToggle = $(".nav-toggle");
   const navLinks = $("#nav-links");
   navToggle?.addEventListener("click", () => {
@@ -50,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  // Close mobile menu after clicking a link
   navLinks?.addEventListener("click", (e) => {
     if (e.target.tagName === "A" && navLinks.classList.contains("open")) {
       navLinks.classList.remove("open");
@@ -58,15 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Contact form validation (interactivity)
   const form = $("#contactForm");
   const status = $("#formStatus");
 
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Clear previous errors
-    document.querySelectorAll(".error").forEach((el) => (el.textContent = ""));
+    document.querySelectorAll(".error").forEach((el) => {
+      el.textContent = "";
+    });
     if (status) status.textContent = "";
 
     const name = $("#name")?.value.trim();
@@ -95,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!valid) return;
 
-    // No backend: simulate success
     form.reset();
     if (status) status.textContent = "✅ Message ready to send (no backend connected).";
   });
