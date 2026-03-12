@@ -1,30 +1,48 @@
-# AI Usage Report – Assignment 1
+# AI Usage Report – Assignment 2
 
-## Tools Used & Use Cases
-### ChatGPT
-- Generated an initial portfolio layout idea (sections + structure).
-- Produced starter HTML/CSS/JS templates aligned with the assignment requirements.
-- Suggested improvements for responsiveness (Grid/Flexbox choices and breakpoints).
-- Helped create simple form validation logic and theme toggling approach.
+## AI Tools Used
+During this assignment, I used the following AI-assisted tools:
 
-## Benefits & Challenges
-### Benefits
-- Faster starting point: reduced time needed to set up structure and styling.
-- Helped debug small issues (e.g., theme persistence, menu toggle behavior).
-- Provided reminders for accessibility (labels, aria attributes, skip link).
+- **ChatGPT**
+- **GitHub Copilot** 
 
-### Challenges / Limitations
-- AI suggestions sometimes included unnecessary complexity.
-- Needed manual adjustments to match course expectations and keep the design simple.
+## How AI Was Used
 
-## Learning Outcomes
-- Better understanding of responsive layout decisions (Grid vs Flex).
-- More confidence with DOM manipulation and event listeners.
-- Improved workflow: plan → generate draft → review → refine → commit.
+### 1. ChatGPT
+I used ChatGPT to assist with:
+- Reviewing the assignment requirements
+- Suggesting ways to make my portfolio more interactive
+- Helping me improve my README and project documentation
+- Checking whether my project was missing any important requirements
+- Explaining how to improve user feedback and dynamic behavior
 
-## Responsible Use & Modifications
-- Reviewed all generated code and rewrote parts to ensure I understood how it works.
-- Simplified AI output to keep it simple.
-- Tested across screen sizes and fixed layout/spacing issues manually.
-- Added comments and improved naming/structure for readability.
-- Ensured academic integrity by documenting AI usage clearly and not submitting unreviewed output.
+ChatGPT was especially useful for identifying gaps in my project, such as:
+- Making sure the project clearly looked like **Assignment 2**
+- Improving the README and technical documentation
+- Verifying that the site included interactive and user-focused features
+
+### 2. GitHub Copilot
+I used GitHub Copilot for:
+- Code suggestions while writing JavaScript
+- Speeding up repetitive code
+- Helping complete simple functions and event listeners
+
+## Examples of AI Assistance
+Some examples of where AI helped include:
+- Suggesting the structure for the project documentation
+- Helping improve the wording in README sections
+- Reviewing the portfolio against the assignment rubric
+- Suggesting improvements to user interaction and feedback
+
+## My Role in the Work
+Although AI tools were used, I made sure to:
+- Read and understand the suggested code
+- Edit and improve AI-generated output
+- Test the website manually
+- Make decisions about what features fit my portfolio
+
+AI was used as a support tool for learning and improving the project, not as a replacement for my own work.
+
+## Reflection
+Using AI helped me work more efficiently and better understand how to improve the user experience of my portfolio website.  
+It also helped me identify missing requirements and improve the overall quality of the final submission.

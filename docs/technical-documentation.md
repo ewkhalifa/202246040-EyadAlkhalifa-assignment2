@@ -1,49 +1,116 @@
-# Technical Documentation – Assignment 1
+# Technical Documentation – Assignment 2 Portfolio Website
 
 ## Overview
-This project is a static portfolio website using:
-- HTML for structure and semantic sections
-- CSS for styling and responsive layout
-- JavaScript for interactivity (theme toggle, greeting message, form validation)
+This project is a personal portfolio website developed for Assignment 2.  
+It builds on the previous portfolio by adding more interactivity, dynamic behavior, and better user feedback using JavaScript.
 
-## Sections Implemented
-1. **About Me**
-   - Intro paragraph + optional skills/hobbies cards.
-2. **Projects**
-   - Two project cards with title, description, and placeholder image areas.
-3. **Contact**
-   - Contact form (Name, Email, Message) with client-side validation (no backend).
+The goal was to create a website that feels more modern and responsive to user actions.
 
-## Responsive Design
-- Uses CSS Grid for major layouts:
-  - Hero uses a 2-column grid on desktop and 1-column on mobile.
-  - About section uses a 3-column grid on desktop and stacks on mobile.
-  - Projects display in 2 columns on desktop and 1 column on mobile.
-- Breakpoint at `max-width: 900px` changes navigation and layout for smaller screens.
+## Main Features
 
-## JavaScript Features
-### Theme Toggle
-- Button toggles `data-theme` attribute on `:root`.
-- Saves preference to `localStorage` so it persists after refresh.
+### 1. Dynamic Greeting
+The website displays a greeting message that changes depending on the time of day.  
+For example:
+- Good Morning
+- Good Afternoon
+- Good Evening
 
-### Greeting Message
-- Displays a greeting (“Good morning/afternoon/evening”) based on the user's local time.
+This feature makes the page feel more personal and dynamic.
 
-### Contact Form Validation
-- Prevents form submission.
-- Validates:
-  - Name is not empty
-  - Email matches a basic email pattern
-  - Message has at least 10 characters
-- Displays inline error messages.
-- Shows a success message indicating no backend is connected.
+### 2. Theme Toggle with localStorage
+The website includes a dark/light theme toggle.  
+When the user changes the theme, the preference is saved in `localStorage`.
 
-## Accessibility Notes
-- Uses semantic HTML (header/nav/main/section/footer).
-- Form inputs have labels.
-- Includes a "Skip to content" link.
-- Adds `aria-expanded` for mobile menu toggle.
+#### How it works:
+- JavaScript detects when the user clicks the theme button
+- The selected theme is applied to the page
+- The preference is stored in `localStorage`
+- When the page reloads, the saved theme is loaded automatically
 
-## Known Limitations
-- No backend: messages are not actually sent.
-- Project links are placeholders until real URLs are added.
+This demonstrates basic JavaScript data handling.
+
+### 3. Responsive Navigation Menu
+A mobile navigation menu is included for smaller screen sizes.  
+Users can open and close the menu using a button.
+
+This improves the usability of the site on phones and tablets.
+
+### 4. Contact Form Validation
+The contact form checks user input before submission.
+
+#### Validation includes:
+- Required fields must not be empty
+- Invalid input is rejected
+- The user receives feedback through error or success messages
+
+This improves the user experience and ensures the user understands what happened.
+
+## User Feedback and Error Handling
+The project includes basic feedback to communicate clearly with the user.
+
+Examples:
+- Error messages when form fields are empty or invalid
+- A success message when the form is completed correctly
+- Clear feedback when the user interacts with the page
+
+This is important because the assignment requires the application to always give the user feedback.
+
+## Animation and Transitions
+CSS transitions and hover effects are used to improve the visual experience.
+
+Examples:
+- Smooth hover effects on buttons or links
+- Smooth visual transitions when changing theme or interacting with elements
+- Improved visual responsiveness for user actions
+
+These effects are simple and helpful rather than distracting.
+
+## Technologies Used
+- **HTML5** for page structure
+- **CSS3** for styling, layout, and transitions
+- **JavaScript** for interactivity and dynamic behavior
+- **localStorage** for saving theme preference
+
+## File Responsibilities
+
+### `index.html`
+Contains the structure of the portfolio website:
+- Navigation
+- Hero/About section
+- Projects or content sections
+- Contact form
+
+### `css/styles.css`
+Contains:
+- Layout styling
+- Responsive design
+- Theme styles
+- Transitions and hover effects
+
+### `js/script.js`
+Contains JavaScript logic for:
+- Dynamic greeting
+- Theme switching
+- Saving theme with `localStorage`
+- Mobile menu interaction
+- Form validation and feedback
+
+## Challenges and Solutions
+
+### Challenge 1: Making the portfolio more interactive
+In Assignment 1, the site was mostly static.  
+To improve it for Assignment 2, JavaScript was added so the page responds to user input.
+
+### Challenge 2: Saving user preference
+To make the experience more personalized, `localStorage` was used to remember the selected theme.
+
+### Challenge 3: Improving communication with the user
+Form validation and feedback messages were added so users know when something goes wrong or when their action succeeds.
+
+## Conclusion
+This Assignment 2 portfolio shows clear progress beyond Assignment 1 by adding:
+- Dynamic content
+- Data handling with JavaScript
+- Better user feedback
+- Improved interactivity
+- A more modern user experience
